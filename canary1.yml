@@ -1,21 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: netflix-deployment
+  name: netflix-deployment-canary
   labels:
     app: netflix
+    version: canary
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: netflix
+      version: canary
   template:
     metadata:
       labels:
         app: netflix
+        version: canary
     spec:
       containers:
-        - name: netflix-container
+        - name: netflix-container-canary
           image: rahamshaik/mynetflix:2.0
           ports:
             - containerPort: 80
