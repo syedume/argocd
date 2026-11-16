@@ -6,8 +6,6 @@ metadata:
     app: netflix
 spec:
   replicas: 10
-  strategy:
-    type: Recreate
   selector:
     matchLabels:
       app: netflix
