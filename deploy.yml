@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: netflix-container
-          image: rahamshaik/mynetflix:1.0
+          image: rahamshaik/mynetflix:2.0
           ports:
             - containerPort: 80
