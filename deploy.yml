@@ -4,15 +4,18 @@ metadata:
   name: netflix-deployment
   labels:
     app: netflix
+    version: stable
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: netflix
+      version: stable
   template:
     metadata:
       labels:
         app: netflix
+        version: stable
     spec:
       containers:
         - name: netflix-container
